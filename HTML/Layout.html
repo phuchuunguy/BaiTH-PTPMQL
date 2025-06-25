@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>CSS Template của Phúc</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      background-color: #666;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
+
+    section {
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    nav {
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      background: #ccc;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    article {
+      -webkit-flex: 3;
+      -ms-flex: 3;
+      flex: 3;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h2>CSS Layout Flexbox (Phúc)</h2>
+<p>Trong ví dụ này, chúng ta tạo một bố cục với header, 2 cột và một footer. Trên màn hình nhỏ, các cột sẽ xếp chồng nhau.</p>
+<p>Thu nhỏ cửa sổ trình duyệt để xem hiệu ứng responsive.</p>
+
+<header>
+  <h2>Hà Nội</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Hồ Gươm</a></li>
+      <li><a href="#">Lăng Bác</a></li>
+      <li><a href="#">Văn Miếu</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Hà Nội</h1>
+    <p>Hà Nội là thủ đô của Việt Nam. Đây là trung tâm chính trị, văn hóa và giáo dục của cả nước.</p>
+    <p>Với lịch sử hơn 1000 năm, Hà Nội là một trong những thành phố cổ kính nhất châu Á với nhiều di tích lịch sử và văn hóa nổi bật.</p>
+    <p>Trang được tạo bởi Phúc.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Ngụy Hữu Phúc</p>
+</footer>
+
+</body>
+</html>

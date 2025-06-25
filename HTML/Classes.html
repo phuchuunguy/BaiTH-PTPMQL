@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ví dụ về class</title>
+  <style>
+    /* CSS sử dụng class */
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+
+    .note {
+      color: green;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="highlight">Thông tin cá nhân.</h2>
+  <p class="note">Ghi chú.</p>
+  <p class="highlight">Ngụy Hữu Phúc </p>
+  <p class="note highlight">MSV nổi bật : 2121051560.</p>
+
+  <button onclick="highlightText()">Tô màu tất cả đoạn văn có class 'highlight'</button>
+
+  <script>
+    function highlightText() {
+      // JavaScript truy cập tất cả phần tử có class 'highlight'
+      var elements = document.getElementsByClassName("highlight");
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].style.color = "violet";
+      }
+    }
+  </script>
+
+</body>
+</html>

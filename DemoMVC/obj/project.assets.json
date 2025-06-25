@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "/Users/nguyenquyen/.nuget/packages/": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nguyenquyen/Downloads/NguyenCongQuyen_2121051357/DemoMVC/DemoMVC.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\OneDrive\\Desktop\\BàiTH PTPMQL\\DemoMVC\\DemoMVC.csproj",
       "projectName": "DemoMVC",
-      "projectPath": "/Users/nguyenquyen/Downloads/NguyenCongQuyen_2121051357/DemoMVC/DemoMVC.csproj",
-      "packagesPath": "/Users/nguyenquyen/.nuget/packages/",
-      "outputPath": "/Users/nguyenquyen/Downloads/NguyenCongQuyen_2121051357/DemoMVC/obj/",
+      "projectPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\BàiTH PTPMQL\\DemoMVC\\DemoMVC.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\BàiTH PTPMQL\\DemoMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/nguyenquyen/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -44,7 +44,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -68,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

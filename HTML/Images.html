@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ví dụ về Hình ảnh</title>
+  <style>
+    .float-left {
+      float: left;
+      margin-right: 15px;
+    }
+
+    .float-right {
+      float: right;
+      margin-left: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Hình ảnh với các thuộc tính cơ bản</h2>
+
+  <!-- 1. Hình ảnh với src, alt, width, height -->
+  <img src="https://www.w3schools.com/html/img_chania.jpg" 
+       alt="Cảnh biển ở Chania" 
+       width="300" height="200">
+
+  <hr>
+
+  <h2>Hình ảnh nổi (float)</h2>
+
+  <!-- 2. Hình nổi bên trái -->
+  <img src="https://www.w3schools.com/html/img_girl.jpg" 
+       alt="Cô gái" 
+       width="200" height="250" 
+       class="float-left">
+  <p>Hình ảnh này nổi bên trái. Văn bản sẽ bao quanh hình ảnh, giúp bạn tạo bố cục linh hoạt trong trang web.</p>
+
+  <div style="clear: both;"></div>
+
+  <!-- 3. Hình nổi bên phải -->
+  <img src="https://www.w3schools.com/html/img_mountains.jpg" 
+       alt="Núi" 
+       width="200" height="150" 
+       class="float-right">
+  <p>Hình ảnh này nổi bên phải. Kỹ thuật float thường dùng trong thiết kế tin tức, blog, hoặc phần mô tả sản phẩm.</p>
+
+  <div style="clear: both;"></div>
+
+</body>
+</html>

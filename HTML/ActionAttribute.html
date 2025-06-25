@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Ngụy Hữu Phúc</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    h1 {
+      color: darkblue;
+    }
+    form {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 300px;
+    }
+    input {
+      margin: 10px 0;
+      width: 100%;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Form với Thuộc Tính HTML – Ngụy Hữu Phúc</h1>
+
+  <form action="/submit.php" method="post" target="_blank" autocomplete="on">
+    <label>Họ tên:</label><br>
+    <input type="text" name="fullname" placeholder="Nhập họ tên" required><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" value="phuc@example.com" readonly><br>
+
+    <label>Mật khẩu:</label><br>
+    <input type="password" name="password" minlength="6"><br>
+
+    <input type="submit" value="Gửi">
+  </form>
+
+</body>
+</html>

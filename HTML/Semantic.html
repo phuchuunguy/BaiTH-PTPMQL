@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Semantic Elements - Phúc</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    header, nav, main, section, article, aside, footer {
+      padding: 20px;
+      margin: 10px;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f4f4f4;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    article {
+      flex: 3;
+      background-color: #e8f0fe;
+    }
+
+    aside {
+      flex: 1;
+      background-color: #f9f9f9;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Trang HTML5 của Phúc</h1>
+  <p>Ví dụ về các phần tử ngữ nghĩa trong HTML5</p>
+</header>
+
+<nav>
+  <strong>Menu:</strong>
+  <a href="#">Trang chủ</a> |
+  <a href="#">Giới thiệu</a> |
+  <a href="#">Liên hệ</a>
+</nav>
+
+<main>
+  <article>
+    <h2>Bài viết chính</h2>
+    <p>HTML5 giới thiệu nhiều thẻ ngữ nghĩa như &lt;article&gt;, &lt;section&gt;, &lt;header&gt;, &lt;footer&gt;, giúp mã dễ hiểu hơn và hỗ trợ SEO tốt hơn.</p>
+    <section>
+      <h3>Phần phụ trong bài viết</h3>
+      <p>Ví dụ: &lt;section&gt; dùng để nhóm nội dung liên quan lại với nhau trong một bài viết.</p>
+    </section>
+  </article>
+
+  <aside>
+    <h3>Thông tin thêm</h3>
+    <p>HTML5 ra đời để hỗ trợ tốt hơn cho cấu trúc nội dung web hiện đại.</p>
+  </aside>
+</main>
+
+<footer>
+  <p>© 2025 – Ngụy Hữu Phúc</p>
+</footer>
+
+</body>
+</html>

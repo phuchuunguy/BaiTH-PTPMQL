@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Input Types – Ngụy Hữu Phúc</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    h1 {
+      color: darkblue;
+    }
+    form {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 340px;
+    }
+    input {
+      margin: 10px 0;
+      width: 100%;
+      padding: 8px;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ngụy Hữu Phúc</h1>
+
+  <form action="/submit.php">
+
+    <label>Text:</label>
+    <input type="text" name="fullname" placeholder="Họ và tên">
+
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="example@gmail.com">
+
+    <label>Password:</label>
+    <input type="password" name="password">
+
+    <label>Số lượng:</label>
+    <input type="number" name="quantity" min="1" max="10">
+
+    <label>Ngày sinh:</label>
+    <input type="date" name="dob">
+
+    <label>Chọn tệp:</label>
+    <input type="file" name="fileUpload">
+
+    <label>Checkin:</label>
+    <input type="checkbox" name="agree"> Tôi đồng ý
+
+    <label>xác nhận:</label><br>
+    <input type="radio" name="gender" value="nam"> Nam
+    <input type="radio" name="gender" value="nu"> Nữ
+
+    <br><br>
+    <input type="submit" value="Gửi">
+
+  </form>
+
+</body>
+</html>

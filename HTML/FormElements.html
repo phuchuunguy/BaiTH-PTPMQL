@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Elements – Ngụy Hữu Phúc</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    h1 {
+      color: darkblue;
+    }
+    form {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 320px;
+    }
+    input, textarea, select, button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ngụy Hữu Phúc</h1>
+
+  <form action="/submit.php">
+    <label>Họ tên:</label>
+    <input type="text" name="fullname" placeholder="Nhập họ tên">
+
+    <label>Mô tả:</label>
+    <textarea name="description" rows="4" placeholder="Viết gì đó..."></textarea>
+
+    <label>Chọn giới tính:</label>
+    <select name="gender">
+      <option value="nam">Nam</option>
+      <option value="nu">Nữ</option>
+      <option value="khac">Khác</option>
+    </select>
+
+    <button type="submit">Gửi</button>
+  </form>
+
+</body>
+</html>
