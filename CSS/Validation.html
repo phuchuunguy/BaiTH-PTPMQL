@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>W3.CSS Validation – Ngụy Hữu Phúc</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    input:invalid {
+      background-color: #fdd;
+    }
+    input:valid {
+      background-color: #dfd;
+    }
+  </style>
+</head>
+<body class="w3-container w3-padding-32">
+
+  <h2>Form kiểm tra</h2>
+
+  <form class="w3-container w3-card-4 w3-light-grey w3-padding" action="#">
+    <label class="w3-text-blue"><b>Tên:</b></label>
+    <input class="w3-input w3-border w3-round" type="text" name="name" required>
+
+    <label class="w3-text-blue"><b>Email:</b></label>
+    <input class="w3-input w3-border w3-round" type="email" name="email" required>
+
+    <label class="w3-text-blue"><b>Mật khẩu (ít nhất 6 ký tự):</b></label>
+    <input class="w3-input w3-border w3-round" type="password" name="pass" pattern=".{6,}" required>
+
+    <br>
+    <button class="w3-button w3-blue w3-round" type="submit">Gửi</button>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Badges – Ngụy Hữu Phúc</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f4f4f4;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 14px;
+      border-radius: 12px;
+      background-color: #999;
+      color: white;
+      margin-left: 8px;
+    }
+
+    .primary   { background-color: #2196F3; }
+    .success   { background-color: #4CAF50; }
+    .danger    { background-color: #f44336; }
+    .warning   { background-color: #ff9800; }
+    .info      { background-color: #00bcd4; }
+
+    .list-group {
+      list-style: none;
+      padding: 0;
+      max-width: 300px;
+    }
+
+    .list-group li {
+      padding: 10px 16px;
+      background: white;
+      margin-bottom: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Huy hiệu</h2>
+
+  <p>Thông báo <span class="badge danger">4</span></p>
+  <p>Tin nhắn <span class="badge success">2</span></p>
+  <p>Yêu cầu <span class="badge warning">5</span></p>
+
+  <h3>Danh sách có badge</h3>
+  <ul class="list-group">
+    <li>HTML <span class="badge primary">10</span></li>
+    <li>CSS <span class="badge info">8</span></li>
+    <li>JavaScript <span class="badge danger">15</span></li>
+  </ul>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>W3.CSS Accordion – Ngụy Hữu Phúc</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<div class="w3-container w3-teal">
+  <h2>Accordion ví dụ</h2>
+</div>
+
+<button onclick="toggleAcc('demo1')" class="w3-button w3-block w3-left-align w3-light-grey">
+  Mục 1: Giới thiệu
+</button>
+<div id="demo1" class="w3-hide w3-container">
+  <p>Ngụy Hữu Phúc đang học HTML, CSS, JavaScript tại W3Schools.</p>
+</div>
+
+<button onclick="toggleAcc('demo2')" class="w3-button w3-block w3-left-align w3-light-grey">
+  Mục 2: Liên hệ
+</button>
+<div id="demo2" class="w3-hide w3-container">
+  <p>Email: phuc@example.com</p>
+</div>
+
+<button onclick="toggleAcc('demo3')" class="w3-button w3-block w3-left-align w3-light-grey">
+  Mục 3: Ghi chú
+</button>
+<div id="demo3" class="w3-hide w3-container">
+  <p>W3.CSS rất dễ hiểu và dễ thực hành.</p>
+</div>
+
+<script>
+  function toggleAcc(id) {
+    var x = document.getElementById(id);
+    if (x.classList.contains("w3-show")) {
+      x.classList.remove("w3-show");
+      x.classList.add("w3-hide");
+    } else {
+      x.classList.remove("w3-hide");
+      x.classList.add("w3-show");
+    }
+  }
+</script>
+
+</body>
+</html>

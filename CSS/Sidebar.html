@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>W3.CSS Sidebar – Ngụy Hữu Phúc</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    body { font-family: "Segoe UI", sans-serif; }
+  </style>
+</head>
+<body>
+
+<div class="w3-teal w3-padding">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰ Menu</button>
+  <h2 style="display:inline;">Xin chào, mình là Phúc!</h2>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-light-grey" style="display:none;width:250px" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Đóng ×</button>
+  <a href="#" class="w3-bar-item w3-button">Trang chủ</a>
+  <a href="#" class="w3-bar-item w3-button">Giới thiệu</a>
+  <a href="#" class="w3-bar-item w3-button">Liên hệ</a>
+</div>
+
+<div class="w3-container w3-padding-32">
+  <p>Nhấn nút ☰ để mở sidebar.</p>
+  <p>Tùy chọn meny và ấn nút đóng để tắt.</p>
+  <p>Sidebar tạo bởi Phúc.</p>
+</div>
+
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+</script>
+
+</body>
+</html>

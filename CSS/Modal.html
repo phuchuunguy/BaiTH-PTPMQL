@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>W3.CSS Modal – Ngụy Hữu Phúc</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<div class="w3-container w3-teal w3-padding-16">
+  <h2>Hộp thoại bật lên</h2>
+  <button onclick="document.getElementById('myModal').style.display='block'" class="w3-button w3-black">
+    Mở hộp thoại
+  </button>
+</div>
+
+<div id="myModal" class="w3-modal">
+  <div class="w3-modal-content w3-animate-top w3-card-4">
+    <header class="w3-container w3-teal">
+      <span onclick="document.getElementById('myModal').style.display='none'" 
+            class="w3-button w3-display-topright">&times;</span>
+      <h2>Xin chào!</h2>
+    </header>
+    <div class="w3-container">
+      <p>Đây là một hộp thoại bật lên.</p>
+      <p>Mình là Hữu Phúc.</p>
+      <p>Mình tới từ mảnh đất Nam Định.</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Hộp thoại của Phúc</p>
+    </footer>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bảng – Ngụy Hữu Phúc</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f9f9f9;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px;
+    }
+
+    th {
+      background-color: #2196F3;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #ddd;
+    }
+
+    .bordered th, .bordered td {
+      border: 1px solid #ccc;
+    }
+
+    caption {
+      caption-side: top;
+      text-align: left;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Bảng sinh viên</h2>
+
+  <table class="bordered">
+    <caption>Danh sách sinh viên</caption>
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Họ tên</th>
+        <th>Lớp</th>
+        <th>Điểm</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Ngụy Hữu Phúc</td>
+        <td>CT66-07B</td>
+        <td>9.5</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Trần Thị Lan</td>
+        <td>CT66-07B</td>
+        <td>8.7</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Phạm Văn Minh</td>
+        <td>CT66-07B</td>
+        <td>7.8</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

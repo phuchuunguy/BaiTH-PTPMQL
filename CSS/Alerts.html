@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Alerts – Ngụy Hữu Phúc</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f5f5f5;
+    }
+
+    .alert {
+      padding: 16px 20px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .success { background-color: #4CAF50; }   /* Xanh lá */
+    .info    { background-color: #2196F3; }   /* Xanh dương */
+    .warning { background-color: #ff9800; }   /* Cam */
+    .danger  { background-color: #f44336; }   /* Đỏ */
+
+    .closebtn {
+      float: right;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .closebtn:hover {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Thông báo </h2>
+
+  <div class="alert success">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Thành công!</strong> Bạn đã đăng ký thành công.
+  </div>
+
+  <div class="alert info">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Thông tin!</strong> Trang web sẽ bảo trì lúc 22h.
+  </div>
+
+  <div class="alert warning">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Cảnh báo!</strong> Mật khẩu sắp hết hạn.
+  </div>
+
+  <div class="alert danger">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Lỗi!</strong> Không thể kết nối tới máy chủ.
+  </div>
+
+</body>
+</html>
+    

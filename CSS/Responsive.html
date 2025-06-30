@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>W3.CSS Responsive – Ngụy Hữu Phúc</title>
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+    .box {
+      padding: 20px;
+      text-align: center;
+      color: white;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .blue { background-color: #2196F3; }
+    .green { background-color: #4CAF50; }
+    .red { background-color: #f44336; }
+  </style>
+</head>
+<body>
+
+  <div class="w3-container w3-teal w3-padding-16">
+    <h2 class="w3-center">Giao diện phản hồi </h2>
+  </div>
+
+  <div class="w3-responsive">
+    <table class="w3-table-all w3-margin-top">
+      <tr class="w3-blue">
+        <th>Tên</th>
+        <th>Lớp</th>
+        <th>Trạng thái</th>
+      </tr>
+      <tr>
+        <td>Phúc</td>
+        <td>DCCTCT66</td>
+        <td>Online</td>
+      </tr>
+      <tr>
+        <td>Linh</td>
+        <td>DCCTCT67</td>
+        <td>Offline</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="box blue w3-hide-small">Chỉ hiện trên MÁY TÍNH (ẩn trên điện thoại)</div>
+  <div class="box green w3-hide-medium w3-hide-large">Chỉ hiện trên ĐIỆN THOẠI</div>
+  <div class="box red w3-hide-small w3-hide-large">Chỉ hiện trên MÁY TÍNH BẢNG</div>
+
+</body>
+</html>
