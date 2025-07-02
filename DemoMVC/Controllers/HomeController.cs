@@ -22,10 +22,11 @@ public class HomeController : Controller
     {
         return View();
     }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    [HttpPost]
+    public IActionResult Index(string Fullname, string Address)
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        string strOutput = "Xin chào " + Fullname + " đến từ " + Address;
+        ViewBag.Mesage = strOutput;
+        return View();
     }
 }
