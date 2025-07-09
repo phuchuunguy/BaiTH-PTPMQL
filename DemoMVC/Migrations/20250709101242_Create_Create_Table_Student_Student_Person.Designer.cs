@@ -10,14 +10,31 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DemoMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250703105544_Create_table_Student")]
-    partial class Create_table_Student
+    [Migration("20250709101242_Create_Create_Table_Student_Student_Person")]
+    partial class Create_Create_Table_Student_Student_Person
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.6");
+
+            modelBuilder.Entity("DemoMVC.Models.Person", b =>
+                {
+                    b.Property<string>("PersonID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("PersonID");
+
+                    b.ToTable("Persons");
+                });
 
             modelBuilder.Entity("DemoMVC.Models.Student", b =>
                 {
@@ -33,7 +50,7 @@ namespace DemoMVC.Migrations
 
                     b.HasKey("StudentID");
 
-                    b.ToTable("students");
+                    b.ToTable("Students");
                 });
 #pragma warning restore 612, 618
         }

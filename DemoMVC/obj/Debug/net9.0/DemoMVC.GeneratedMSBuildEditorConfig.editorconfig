@@ -48,12 +48,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/OneDrive/Desktop/BàiTH PTPMQL/DemoMVC/Views/Person/Address.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXEFkZHJlc3MuY3NodG1s
+[C:/Users/DELL/OneDrive/Desktop/BàiTH PTPMQL/DemoMVC/Views/Person/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/DELL/OneDrive/Desktop/BàiTH PTPMQL/DemoMVC/Views/Person/Fullname.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXEZ1bGxuYW1lLmNzaHRtbA==
+[C:/Users/DELL/OneDrive/Desktop/BàiTH PTPMQL/DemoMVC/Views/Person/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/OneDrive/Desktop/BàiTH PTPMQL/DemoMVC/Views/Person/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/DELL/OneDrive/Desktop/BàiTH PTPMQL/DemoMVC/Views/Person/Index.cshtml]
