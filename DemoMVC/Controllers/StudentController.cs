@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using DemoMVC.Data;
-using DemoMVC.Models;
+using DemoMVC.Models.Entity;
+using DemoMVC.Models.Process;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,8 +21,17 @@ namespace DemoMVC.Controllers
         }
         public IActionResult Create()
         {
-            return View();
+            AutoGenerateId autoGenerateId = new AutoGenerateId();
+            var student = _context.Students.OrderByDescending(s => s.StudentID).FirstOrDefault();
+            var studentID = student == null ? "ST000" : student.StudentID;
+            var newStudentID = autoGenerateId.GenerateID(studentID);
+            var newStudent = new Student
+            {
+                StudentID = newStudentID,
+            };
+            return View(newStudent);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("StudentID,FullName,Address")] Student student)

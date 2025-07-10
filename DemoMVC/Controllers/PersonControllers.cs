@@ -1,16 +1,15 @@
-using System.Threading.Tasks;
 using DemoMVC.Data;
-using DemoMVC.Models;
+using DemoMVC.Models.Entity;
+using DemoMVC.Models.Process;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+ using System.Threading.Tasks;
 
 namespace DemoMVC.Controllers
 {
-    public class PersonController(ApplicationDbContext context, AutoCode autocode) : Controller
+    public class PersonController(ApplicationDbContext context) : Controller
     {
         private readonly ApplicationDbContext _context = context;
-
-        private readonly AutoCode _autocode = autocode;
         
         public async Task<IActionResult> Index()
         {
@@ -18,16 +17,17 @@ namespace DemoMVC.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
-            var lastPerson = await _context.Persons
-                .OrderByDescending(p => p.PersonID)
-                .FirstOrDefaultAsync();
-
-            var PersonID = lastPerson?.PersonID ?? "PS00";
-            var newPersonID = _autocode.GeneratePersonID(PersonID);
-            ViewBag.NewPersonID = newPersonID;
-            return View();
+            var person = _context.Persons.OrderByDescending(p => p.PersonID).FirstOrDefault();
+            var personID = person == null ? "PS0" : person.PersonID;
+            var autoGenerateId = new AutoGenerateId();
+            var newPersonID = autoGenerateId.GenerateID(personID);
+            var newPerson = new Person
+            {
+                PersonID = newPersonID
+            };
+            return View(newPerson);
         }
 
         [HttpPost]

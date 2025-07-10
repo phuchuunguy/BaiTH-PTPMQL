@@ -1,4 +1,4 @@
-namespace DemoMVC.Models
+namespace DemoMVC.Models.Entity
 {
     public class HeThongPhanPhoi
     {

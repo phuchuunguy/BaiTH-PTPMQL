@@ -1,4 +1,4 @@
-using DemoMVC.Models;
+using DemoMVC.Models.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace DemoMVC.Data
