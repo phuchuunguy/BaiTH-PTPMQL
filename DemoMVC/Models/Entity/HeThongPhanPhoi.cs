@@ -1,8 +1,13 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace DemoMVC.Models.Entity
 {
     public class HeThongPhanPhoi
     {
-        public string? MaHTPP { get; set; }
-        public string? TenHTPP { get; set; }
+        [Key]
+        public string MaHTPP { get; set; } = default!;
+        public string TenHTPP { get; set; } = default!;
+
+        public virtual ICollection<DaiLy> DaiLys { get; set; } = default!;
     }
 }
