@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\OneDrive\\Desktop\\BàiTH PTPMQL\\DemoMVC\\DemoMVC.csproj": {}
+    "C:\\Users\\DELL\\OneDrive\\Desktop\\BaiTH PTPMQL\\DemoMVC\\DemoMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\OneDrive\\Desktop\\BàiTH PTPMQL\\DemoMVC\\DemoMVC.csproj": {
+    "C:\\Users\\DELL\\OneDrive\\Desktop\\BaiTH PTPMQL\\DemoMVC\\DemoMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\OneDrive\\Desktop\\BàiTH PTPMQL\\DemoMVC\\DemoMVC.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\OneDrive\\Desktop\\BaiTH PTPMQL\\DemoMVC\\DemoMVC.csproj",
         "projectName": "DemoMVC",
-        "projectPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\BàiTH PTPMQL\\DemoMVC\\DemoMVC.csproj",
+        "projectPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\BaiTH PTPMQL\\DemoMVC\\DemoMVC.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\BàiTH PTPMQL\\DemoMVC\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\BaiTH PTPMQL\\DemoMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -44,6 +44,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.105.0, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
