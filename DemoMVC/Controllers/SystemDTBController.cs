@@ -7,17 +7,63 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DemoMVC.Data;
 using DemoMVC.Models.Entity;
+using DemoMVC.Models.Process;
 
 namespace DemoMVC.Controllers
 {
     public class SystemDTBController : Controller
     {
         private readonly ApplicationDbContext _context;
+         private readonly ExcelProcess _excelProcess = new();
 
         public SystemDTBController(ApplicationDbContext context)
         {
             _context = context;
         }
+
+        public IActionResult Upload()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Upload(IFormFile file)
+    {
+        if (file == null || (Path.GetExtension(file.FileName) != ".xls" && Path.GetExtension(file.FileName) != ".xlsx"))
+        {
+            ModelState.AddModelError("", "Vui lòng chọn file Excel (.xls hoặc .xlsx).");
+            return View();
+        }
+
+        var path = Path.Combine(Directory.GetCurrentDirectory(), "Uploads", "HTPP.xlsx");
+        using (var stream = new FileStream(path, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+
+        var dt = _excelProcess.ExcelToDataTable(path);
+        for (int i = 0; i < dt.Rows.Count; i++)
+        {
+            var ma = dt.Rows[i][0]?.ToString()?.Trim();
+            var ten = dt.Rows[i][1]?.ToString()?.Trim();
+
+            if (string.IsNullOrEmpty(ma) || string.IsNullOrEmpty(ten)) continue;
+
+            if (!_context.HeThongPhanPhois.Any(x => x.MaHTPP == ma))
+            {
+                _context.HeThongPhanPhois.Add(new HeThongPhanPhoi
+                {
+                    MaHTPP = ma,
+                    TenHTPP = ten
+                });
+            }
+        }
+
+        await _context.SaveChangesAsync();
+        return RedirectToAction("Index");
+    }
+
 
         // GET: SystemDTB
         public async Task<IActionResult> Index()

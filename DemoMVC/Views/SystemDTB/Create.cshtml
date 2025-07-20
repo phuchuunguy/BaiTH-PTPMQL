@@ -7,6 +7,16 @@
 <h1>Create</h1>
 
 <h4>HeThongPhanPhoi</h4>
+<hr>
+    <form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Chọn file Excel:</label>
+        <input type="file" name="file" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+<hr />
 <hr />
 <div class="row">
     <div class="col-md-4">

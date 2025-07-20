@@ -32,7 +32,7 @@ namespace DemoMVC.Controllers
                 }
                 else
                 {
-                    var fileName = DateTime.Now.ToShortTimeString() + fileExtension;
+                    var fileName = DateTime.Now.ToString("yyyy-MM-dd") + fileExtension;
                     var filePath = Path.Combine(Directory.GetCurrentDirectory() + "/Uploads/Excels", fileName);
                     var fileLocation = new FileInfo(filePath).ToString();
                     using (var stream = new FileStream(filePath, FileMode.Create))
@@ -57,17 +57,23 @@ namespace DemoMVC.Controllers
 
         public IActionResult Create()
         {
-            var person = _context.Persons.OrderByDescending(p => p.PersonID).FirstOrDefault();
-            var personID = person == null ? "PS000" : person.PersonID;
-            var autoGenerateId = new AutoGenerateId();
-            var newPersonID = autoGenerateId.GenerateID(personID);
-            var newPerson = new Person
-            {
-                PersonID = newPersonID
-            };
-            return View(newPerson);
-        }
+            // var lastValidPersonID = _context.Persons
+            //     .Select(p => p.PersonID)
+            //     .Where(id => !string.IsNullOrEmpty(id) && 
+            //                 System.Text.RegularExpressions.Regex.IsMatch(id, @"^[A-Za-z]+\d+$"))
+            //     .OrderByDescending(id => id)
+            //     .FirstOrDefault() ?? "PS000";
 
+            // var autoGenerateId = new AutoGenerateId();
+            // var newPersonID = autoGenerateId.GenerateID(lastValidPersonID);
+
+            // var newPerson = new Person
+            // {
+            //     PersonID = newPersonID
+            // };
+            //return View(newPerson);
+            return View();
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PersonID,FullName,Address")] Person person)
